@@ -1,10 +1,15 @@
-num=int(input("enter a num"))
-fact=1
-if num < 0:
-  print("negative num")
-elif num ==0:
-  print("the factorial of a seven number 0 to 1")
-else:
- for i in range (1,num+1):
-  fact=fact*i
-print(fact)
+def linearSearchProduct(productList, targetProduct):
+    indices = []
+
+    for index, product in enumerate(productList):
+        if product == targetProduct:
+            indices.append(index)
+    
+    return indices
+
+# Example usage
+products = ["shoes", "boat", "loafer", "sandal", "shoes"]
+target = "shoes"
+target2 = "apples"
+result = linearSearchProduct(products, target)
+print(result)
